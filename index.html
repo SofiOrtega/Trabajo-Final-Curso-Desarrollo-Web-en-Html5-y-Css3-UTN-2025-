@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IKIGAI</title>
+    <link rel="icon" href="imagenes/favicon.png" />
+    <!--Recordar agregar favicon.ico-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/dbfbdc85b2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <div class="encabezado__contenedor">
+        <div class="encabezado__logo">
+          <img
+            class="logo"
+            src="./imagenes/logo-inicio.png"
+            alt="logo-restaurante"
+          />
+        </div>
+        <label class="nav__toggle">
+          <input type="checkbox" id="menu-input" class="nav__input">
+        </label>
+        <nav class="encabezado__nav">
+          <ul class="encabezado__lista">
+            <li class="nav__item">
+              <a href="#INICIO" class="nav__link nav__link--active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#SOBRE-NOSOTROS" class="nav__link">Sobre nosotros</a>
+            </li>
+            <li class="nav__item">
+              <a href="#CARTA" class="nav__link">Carta</a>
+            </li>
+            <li class="nav__item">
+              <a href="#GALERIA" class="nav__link">Galería</a>
+            </li>
+            <li class="nav__item">
+              <a href="#CONTACTO" class="nav__link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="principal">
+      <section id="inicio" class="inicio-contenido">
+        <h1 class="inicio-contenido__titulo titulo-principal sombra-texto">
+          IKigai restaurante: un viaje de sabores <br/>
+          desde japón hasta tu mesa
+        </h1>
+        <p class="inicio-contenido__descripcion parrafo-general">
+          Fusionamos tradición y pasión para ofrecerte ramen, sushi y
+          platos típicos que despiertan tus sentidos. Ubicados en el corazón de
+          Córdoba Capital, te invitamos a vivir una experiencia gastronómica
+          única.
+        </p>
+        <p class="inicio-contenido__horario parrafo-general">
+          Todos los días de 12:00 a 00:00 hs.
+        </p>
+        <a href="#RESERVAR" class="inicio-contenido__boton boton">Reservá tu mesa</a>
+        <ul class="redesociales-links">
+          <li class="redesociales-links__item">
+            <a href="#" class="redesociales-links__link" aria-label="X"
+              ><i class="fa-brands fa-x-twitter fa-3x"></i
+            ></a>
+          </li>
+          <li class="redesociales-links__item">
+            <a href="#" class="redesociales-links__link" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram fa-3x"></i
+            ></a>
+          </li>
+          <li class="redesociales-links__item">
+            <a href="#" class="redesociales-links__link" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f fa-3x"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sobre-nosotros contenedor-seccion" id="SOBRE-NOSOTROS">
+        <div class="sobre-nosotros__contenido">
+          <hr class="sobre-nosotros__separador-verde separador" />
+          <h2 class="sobre-nosotros__titulo titulo-principal">Sobre nosotros</h2>
+          <p class="sobre-nosotros__parrafo parrafo-general">
+            En la vibrante provincia de Córdoba, nace IKIGAI, un espacio donde
+            la técnica milenaria de la cocina japonesa se fusiona con la pasión
+            argentina. Nuestra filosofía es nuestra razón de ser: una dedicación
+            profunda que se refleja en cada detalle de nuestro arte culinario.
+            Nos enorgullece honrar una de las culturas más antiguas del mundo a
+            través de una propuesta gastronómica con la autenticidad y la
+            historia que la caracterizan.
+          </p>
+          <hr class="sobre-nosotros__separador-verde separador" />
+        </div>
+        <div class="sobre-nosotros__imagenes">
+          <img
+            class="sobre-nosotros__imagen-restaurante fondo-imagen"
+            src="./imagenes/restaurante-img.jpg"
+            alt="Se muestra una imagen del restaurante IKIGAI"
+          />
+          <img
+            class="sobre-nosotros__imagen-chef"
+            src="./imagenes/chef.jpg"
+            alt="Imagen de Chef cocinando"
+          />
+        </div>
+      </section>
+
+      <section class="banner-frase fondo-imagen">
+        <p class="banner-frase__texto sombra-texto">
+          En IKIGAI, te invitamos a encontrar tu propia razón de ser, a
+          desconectar del mundo exterior y a conectar con la belleza de un
+          momento compartido y la alegría de una experiencia inolvidable.
+        </p>
+      </section>
+
+      <section class="carta contenedor-seccion" id="CARTA">
+        <div class="carta__seccion-principal">
+          <div class="carta__contenido-imagen">
+            <img
+              class="carta__imagen"
+              src="./imagenes/nuestra-car-img1.jpg"
+              alt="Bebidas japonesas"
+            />
+            <img
+              class="carta__imagen"
+              src="./imagenes/nuestra-car-img2.jpg"
+              alt="Plato de katsu curry"
+            />
+            <img
+              class="carta__imagen"
+              src="./imagenes/nuestra-car-img3.jpg"
+              alt="Brindis con sushi"
+            />
+          </div>
+          <div class="carta__contenido-texto">
+            <h2 class="carta__titulo titulo-principal">Nuestra Carta</h2>
+            <img
+              class="carta__decoracion-zigzag"
+              src="./imagenes/zig-zag-icon.svg"
+              alt="Zig-zag decorativo"
+            />
+            <p class="carta__parrafo parrafo-general">
+              Preparado con pasión y con los ingredientes más frescos, nuestro
+              menú te invita a un viaje completo por la gastronomía japonesa.
+              Desde entradas y ensaladas ligeras, hasta los más variados rolls
+              de sushi, platos principales de nuestra cocina caliente y
+              exquisitos postres y bebidas. Te invitamos a encontrar la opción
+              perfecta para compartir y disfrutar.
+            </p>
+          </div>
+        </div>
+
+        <div class="carta__seccion-ofrecemos contenedor-seccion">
+          <h3 class="carta__titulo-ofrecemos titulo-principal">¿Qué te ofrecemos?</h3>
+          <div class="carta__items-ofrecemos">
+            <div class="carta__item-ofrecemos">
+              <img
+                class="carta__imagen-ofrecemos"
+                src="./imagenes/que-ofre-img1.jpg"
+                alt=""
+              />
+              <h4 class="carta__subtitulo-ofrecemos">
+                Opciones veganas, vegetarianas y sin tacc
+              </h4>
+              <p class="carta__parrafo-ofrecemos parrafo-general">
+                Creemos que todos deben disfrutar de la mejor experiencia
+                culinaria. Ofrecemos opciones seguras y deliciosas para todas
+                las dietas.
+              </p>
+            </div>
+            <div class="carta__item-ofrecemos">
+              <img
+                class="carta__imagen-ofrecemos"
+                src="./imagenes/que-ofre-img2.jpg"
+                alt=""
+              />
+              <h4 class="carta__subtitulo-ofrecemos">
+                Productos frescos y de calidad premium
+              </h4>
+              <p class="carta__parrafo-ofrecemos parrafo-general">
+                Elegimos ingredientes naturales de primera calidad, para
+                elaborar nuestros platos en el momento y a la vista de nuestros
+                comensales.
+              </p>
+            </div>
+            <div class="carta__item-ofrecemos">
+              <img
+                class="carta__imagen-ofrecemos"
+                src="./imagenes/que-ofre-img3.jpg"
+                alt=""
+              />
+              <h4 class="carta__subtitulo-ofrecemos">
+                Sabores que te transportan al oriente
+              </h4>
+              <p class="carta__parrafo-ofrecemos parrafo-general">
+                Nos comprometemos y respetamos las técnicas que dan origen a
+                nuestros platos, combinando y destacando sabores únicos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carta__seccion-descubre fondo-imagen overlay-oscuro">
+          <h3 class="carta__titulo-descubre titulo-principal sombra-texto">Descubre nuestros platos</h3>
+          <div class="carta__opciones">
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/entradas-menu.png" alt="Imagen de entradas"/>
+                <p class="carta__nombre-opcion">ENTRADAS</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/ensalada-menu.jpg" alt="Imagen de ensalada"/>
+                <p class="carta__nombre-opcion">Ensaladas</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/poke-bowl-menu.jpg" alt="Imagen de poke bowl"/>
+                <p class="carta__nombre-opcion">Poke bowls</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/plato-principal-menu.jpg" alt="Icono de plato principal"/>
+                <p class="carta__nombre-opcion">Platos principales</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/variedad-sushi-menu.jpg" alt="Imagen de sushi"/>
+                <p class="carta__nombre-opcion">Sushi</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/combo-menu.jpg" alt="Imagen de combo"/>
+                <p class="carta__nombre-opcion">Combos</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/bebidas-menu.jpg" alt="Imagen de bebida"/>
+                <p class="carta__nombre-opcion">Bebidas</p>
+              </div>
+            </div>
+            <div class="carta__opcion">
+              <div class="carta__tarjeta">
+                <img class="carta__imagen-opcion" src="./imagenes/postre-menu.jpg" alt="Imagen de postre"/>
+                <p class="carta__nombre-opcion">Postres</p>
+              </div>
+            </div>
+          </div>
+          <div class="carta__seccion-descubre-boton">
+            <p class="carta__parrafo-boton parrafo-general"> Puedes ver todas nuestras opciones de comida y bebida en la carta </p>
+            <button class="carta__boton boton">Ver carta completa</button>
+          </div>
+        </div>
+
+        <div class="carta__seccion-delivery fondo-imagen overlay-oscuro">
+          <div class="carta__contenido-delivery">
+            <h3 class="carta__titulo-delivery titulo-principal sombra-texto">Descubre nuestra carta delivery y takeaway</h3>
+            <p class="carta__parrafo-delivery parrafo-general">¿Quieres hacer un pedido online? Entra en nuestra carta delivery & take away y descubre al detalle nuestros productos para hacer la mejor selección. Puedes comprobar todos los alérgenos en la misma carta.</p>
+            <button class="carta__boton-delivery boton">Ver carta delivery y takeaway</button>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="galeria contenedor-seccion" id="GALERIA">
+        <h2 class="galeria__titulo titulo-principal">Galería</h2>
+        <hr class="galeria__separador separador" />
+        <div class="galeria__imagenes">
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img1.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img2.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img3.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img4.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img5.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img6.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img7.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img8.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img9.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img10.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img11.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img12.jpeg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img13.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img14.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+          <div class="galeria__imagen-contenido">
+            <img
+              class="galeria__imagen"
+              src="./imagenes/galeria-img15.jpg"
+              alt="Imagen de la galería"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="contacto contenedor-seccion" id="CONTACTO">
+        <h2 class="contacto__titulo titulo-principal">Contáctanos</h2>
+        <hr class="contacto__separador separador" />
+
+        <div class="contacto__mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.0688782968!2d-64.2766128198551!3d-31.399426850179594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1757111864180!5m2!1ses!2sar" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+        <div class="contacto__contenido-principal">
+          <div class="contacto__contenedor">
+          <div class="contacto__informacion">
+            <div class="contacto__imagen-contenedor">
+              
+              <img
+                class="contacto__imagen-formulario fondo-imagen"
+                src="./imagenes/img-form.jpeg"
+                alt="Imagen representativa de contacto"
+              />
+            </div>
+            <div class="contacto__datos">
+              <p class="contacto__dato-logo">
+                <img
+                  class="contacto__logo"
+                  src="./imagenes/ikigai-logo-form.png"
+                  alt="Logo IKIGAI"
+                />
+              </p>
+              <p class="contacto__dato">
+                <i class="fa-solid fa-location-dot"></i>
+                Av. general paz 25k, nueva córdoba, córdoba capital
+              </p>
+              <p class="contacto__dato">
+                <i class="fa-solid fa-phone"></i>
+                +54 351 555-1234
+              </p>
+              <p class="contacto__dato">
+                <i class="fa-solid fa-envelope"></i>
+                reservas@ikigaicomidajaponesa.com.ar
+              </p>
+            </div>
+          </div>
+
+          <div class="formulario-contacto">
+            <h3 class="formulario-contacto__titulo titulo-principal">Formulario de contacto</h3>
+            <p class="formulario-contacto__descripcion parrafo-general">
+              En IKIGAI estamos abiertos a sugerencias, así que si tienes alguna
+              consulta, duda, reclamo o deseas ponerte en contacto con nosotros
+              para una reserva puedes hacerlo por aquí: </p>
+            <form action="#" method="POST">
+              <div class="formulario-contacto__grupo">
+                <label class="formulario-contacto__label" for="nombre"
+                  >Nombre completo *</label
+                >
+                <input
+                  class="formulario-contacto__input"
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                />
+              </div>
+              <div class="formulario-contacto__grupo">
+                <label class="formulario-contacto__label" for="telefono"
+                  >Teléfono *</label
+                >
+                <input
+                  class="formulario-contacto__input"
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  required
+                />
+              </div>
+              <div class="formulario-contacto__grupo">
+                <label class="formulario-contacto__label" for="email"
+                  >E-mail *</label
+                >
+                <input
+                  class="formulario-contacto__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="formulario-contacto__grupo">
+                <label class="formulario-contacto__label" for="mensaje"
+                  >Mensaje</label
+                >
+                <textarea
+                  class="formulario-contacto__textarea"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button class="formulario-contacto__boton" type="submit">
+                ENVIAR
+              </button>
+            </form>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="footer__logo">
+          <img
+            class="footer__imagen-logo"
+            src="./imagenes/logo-piedepagina.png"
+            alt="Logotipo de IKIGAI"
+          />
+        </div>
+      <div class="footer__contenido-principal">
+        
+
+        <div class="footer__navegacion">
+          <h4 class="footer__titulo">IKIGAI</h4>
+          <ul class="footer__lista">
+            <li class="footer__item-lista ">
+              <a class="footer__enlace  parrafo-general" href="#">Home</a>
+            </li>
+            <li class="footer__item-lista">
+              <a class="footer__enlace  parrafo-general" href="#">Sobre nosotros</a>
+            </li>
+            <li class="footer__item-lista">
+              <a class="footer__enlace  parrafo-general" href="#">Carta</a>
+            </li>
+            <li class="footer__item-lista">
+              <a class="footer__enlace  parrafo-general" href="#">Galería</a>
+            </li>
+            <li class="footer__item-lista">
+              <a class="footer__enlace  parrafo-general" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__horarios">
+          <h4 class="footer__titulo">Horarios</h4>
+          <p class="footer__parrafo parrafo-general">Todos los días de 12:00 a 00:00 hs.</p>
+        </div>
+
+        <div class="footer__servicios">
+          <h4 class="footer__titulo">Servicios</h4>
+          <ul class="footer__lista">
+            <li class="footer__item-lista  parrafo-general">A domicilio</li>
+            <li class="footer__item-lista  parrafo-general">Pet friendly</li>
+            <li class="footer__item-lista  parrafo-general">
+              Accesible para personas con discapacidad
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__contacto">
+          <h4 class="footer__titulo">Contacto</h4>
+          <ul class="footer__lista">
+            <li class="footer__item-lista  parrafo-general">+54 351 555-1234</li>
+            <li class="footer__item-lista  parrafo-general">
+              reservas@ikigaicomidajaponesa.com.ar
+            </li>
+            <li class="footer__item-lista footer__redes-sociales">
+              <a href="#" class="footer__redes-sociales__link">
+                <i class="fa-brands fa-x-twitter fa-2x"></i>
+              </a>
+              <a href="#" class="footer__redes-sociales__link">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+              </a>
+              <a href="#" class="footer__redes-sociales__link">
+                <i class="fa-brands fa-facebook-f fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer__separador separador" />
+
+      <p class="footer__copyright parrafo-general">
+        © Copyright 2025 IKIGAI RESTAURANTE JAPONÉS. Todos los derechos
+        reservados
+      </p>
+      <p class="footer__autor parrafo-general">Diseñado y hecho con ♥ por Sofia Ortega</p>
+    </footer>
+  </body>
+</html>

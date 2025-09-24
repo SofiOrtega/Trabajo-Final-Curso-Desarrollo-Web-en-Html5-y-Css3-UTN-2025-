@@ -1,0 +1,900 @@
+/* Variables */
+:root {
+  --rojo: #ce2e52;
+  --verde: #809d19;
+  --amarillo: #ffee8c;
+  --amarillo-claro: #fddb3a;
+  --negro: #000;
+  --blanco: #fff;
+  --gris: #444;
+  --gris-oscuro: #1b171a;
+  --fuente-titulo: 'Bebas Neue', sans-serif;
+  --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* Estilos generales/globales */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--fuente-principal);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Clases reutilizables */
+.contenedor-seccion {
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+  font-family: var(--fuente-titulo);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.parrafo-general {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.boton {
+  text-decoration: none;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.separador {
+  border: none;
+  height: 10px;
+  width: 20%; 
+  margin: 20px auto;
+}
+
+.fondo-imagen {
+  background: no-repeat center/cover;
+  overflow: hidden;
+}
+
+.overlay-oscuro {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.sombra-texto {
+  text-shadow: 2px 2px 4px var(--negro);
+}
+
+/* --- INICIO --- */
+.nav__toggle{display: none;}
+.encabezado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+}
+
+.encabezado__contenedor,.encabezado__nav {
+  display: flex;
+}
+
+.encabezado__contenedor {
+  justify-content: space-around;
+}
+
+.encabezado__nav {
+  justify-content: center;
+  align-items: center;
+}
+
+.encabezado__lista {
+  display: flex;
+  gap: 60px;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  text-shadow: var(--negro) 0 -2px;
+  text-decoration: none;
+  color: var(--blanco);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative; 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px; 
+  background-color: var(--amarillo);
+  transition: width 0.3s ease-out;
+}
+
+.nav__link:hover {
+  color: var(--amarillo);
+  transform: scale(1.1);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.inicio-contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px 0;
+  min-height: 100vh;
+  height: 100vh;
+  color: var(--blanco);
+  position: relative;
+  text-align: left;
+  padding: 6% 10% 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./imagenes/sushi-fondo-inicio.jpg") center/cover no-repeat;
+}
+
+.inicio-contenido__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--amarillo);
+  margin-top: 20px;
+}
+
+.inicio-contenido__descripcion,.inicio-contenido__horario {
+  width: 70%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px var(--negro);
+}
+
+.inicio-contenido__horario {
+  font-weight: bold;
+}
+
+.inicio-contenido__boton {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+
+.redesociales-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.redesociales-links__link i {
+  color: var(--blanco);
+}
+
+/* --- SOBRE NOSOTROS --- */
+
+.sobre-nosotros {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.sobre-nosotros__contenido {
+  width: 40%;
+}
+
+.sobre-nosotros__titulo {
+  color: var(--rojo);
+  margin: 10px 0 20px;
+}
+
+.sobre-nosotros__parrafo {
+  color: var(--gris);
+}
+
+.sobre-nosotros__separador-verde {
+  height: 10px;
+  background-color: var(--verde); 
+  width: 100%; 
+  margin: 30px 0;
+  border: none;
+}
+
+.sobre-nosotros__imagenes {
+  position: relative;
+  width: 40%;
+  height: 70%;
+}
+
+.sobre-nosotros__imagen-restaurante {
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-nosotros__imagen-chef {
+  position: absolute;
+  bottom: -50px; 
+  left: 200px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+/* --- BANNER FRASE --- */
+
+.banner-frase, .carta__contenido-imagen,.carta__seccion-descubre,.carta__seccion-delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-frase {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./imagenes/frase-italic-ikigai.jpg") right center/cover no-repeat fixed;
+}
+
+.banner-frase__texto {
+  font-size: 2rem;
+  color: var(--blanco);
+  font-style: italic;
+  text-align: center;
+  max-width: 70%;
+  padding: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* --- SECCIÓN CARTA --- */
+
+.carta {
+  width: 100%;
+  height: auto;
+}
+
+.carta__seccion-principal {
+  display: flex; 
+  width: 100%;
+  height: 550px;
+}
+
+.carta__contenido-imagen {
+  gap: 20px; 
+  width: 55%; 
+  padding: 20px;
+  background-color: var(--verde); 
+}
+
+.carta__imagen {
+  height: 70%;
+  width: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.carta__contenido-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%; 
+  padding: 50px;
+  background-color: var(--gris-oscuro); 
+  color: var(--blanco); 
+}
+
+.carta__titulo {
+  color: var(--rojo);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-family: var(--fuente-titulo);
+}
+
+.carta__decoracion-zigzag {
+  width: 150px; 
+  margin-bottom: 20px;
+}
+
+.carta__parrafo {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.carta__seccion-ofrecemos {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.carta__titulo-ofrecemos {
+  font-family: var(--fuente-titulo);
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.carta__items-ofrecemos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.carta__item-ofrecemos {
+  width: 25%;
+  text-align: center;
+}
+
+.carta__imagen-ofrecemos {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.carta__subtitulo-ofrecemos {
+  font-family: var(--fuente-titulo);
+  font-size: 1.5rem;
+}
+
+.carta__parrafo-ofrecemos, .carta__subtitulo-ofrecemos {
+  margin-top: 20px;
+}
+
+.carta__seccion-descubre {
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./imagenes/fondo-descubreplatos.jpg") center/cover no-repeat;
+}
+
+.carta__titulo-descubre {
+  color: var(--blanco);
+  font-family: var(--fuente-titulo);
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+
+.carta__seccion-descubre-boton {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carta__parrafo-boton {
+  color: var(--blanco);
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.carta__opciones {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 30px; 
+  max-width: 1200px; 
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.carta__opcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carta__tarjeta {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 3px solid var(--rojo);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--negro);
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carta__opciones:hover .carta__tarjeta {
+  filter: opacity(0.5) brightness(0.6);
+}
+
+.carta__opciones:hover .carta__tarjeta:hover {
+  transform: scale(1.1); 
+  filter: none;
+  font-weight: bold;
+}
+
+.carta__imagen-opcion {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.carta__nombre-opcion {
+  position: relative;
+  z-index: 2; 
+  background-color: #000000b3;
+  color: var(--blanco);
+  text-transform: uppercase;
+  padding: 15px 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.carta__boton,.carta__boton-delivery {
+  padding: 18px 40px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--blanco);
+}
+
+.carta__boton {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.carta__boton-delivery {
+  background-color: var(--amarillo-claro);
+  color: var(--negro);
+}
+
+.carta__boton:hover {
+  background-color: #222;
+}
+
+.carta__boton-delivery:hover {
+  background-color: var(--amarillo); 
+}
+
+.carta__seccion-delivery {
+  min-height: 400px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.64)), url("./imagenes/img-delivery-takeaway.jpg") center/cover no-repeat;
+}
+
+.carta__contenido-delivery {
+  max-width: 70%;
+  padding: 40px;
+  border-radius: 10px;
+  color: var(--blanco);
+}
+
+.carta__titulo-delivery {
+  color: var(--amarillo);
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: var(--fuente-titulo);
+}
+
+.carta__parrafo-delivery {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* --- GALERÍA --- */
+
+.galeria {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+.galeria__titulo {
+  text-align: center;
+  font-family: var(--fuente-titulo);
+  font-size: 3.5rem;
+}
+
+.galeria__separador {
+  height: 10px;
+  background-color: var(--rojo); 
+  width: 20%; 
+  margin: 20px auto;
+  border: none;
+}
+
+.galeria__imagen-contenido {
+  height: 280px;
+  overflow: hidden; 
+}
+
+.galeria__imagen {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+}
+
+.galeria__imagenes {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  text-align: center;
+  gap: 30px;
+}
+
+/* --- CONTACTO --- */
+
+.contacto {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--amarillo);
+  width: 100%;
+  height: auto;
+  padding-top: 3%;
+}
+
+.contacto__titulo {
+  color: var(--negro);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: var(--fuente-titulo);
+}
+
+.contacto__separador {
+  height: 10px;
+  background-color: var(--rojo); 
+  width: 20%; 
+  margin: 20px auto;
+  border: none;
+}
+
+.contacto__mapa {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+}
+
+.contacto__mapa iframe {
+  width: 100%;
+}
+
+.contacto__contenido-principal {
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 5% auto;
+  padding: 20px;
+}
+
+.contacto__contenedor {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap; 
+  overflow: hidden;
+  border: 1px solid var(--negro);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contacto__informacion {
+  width: 50%;
+  background-color: var(--blanco);
+  border-right: 1px solid var(--negro);
+}
+
+.formulario-contacto {
+  width: 50%;
+  background-color: var(--blanco);
+  padding: 30px;
+}
+
+.contacto__imagen-contenedor {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.contacto__imagen-formulario {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid var(--negro);
+}
+
+.contacto__datos {
+  padding: 25px;
+}
+
+.contacto__dato-logo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contacto__logo {
+  width: 60%;
+  height: auto;
+}
+
+.contacto__dato {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.5rem;
+  color: var(--gris);
+  margin-bottom: 10px;
+  font-family: var(--fuente-titulo);
+}
+
+.formulario-contacto__titulo {
+  text-align: center;
+  font-family: var(--fuente-titulo);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.formulario-contacto__descripcion {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.formulario-contacto__grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formulario-contacto__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--gris);
+}
+
+.formulario-contacto__input,.formulario-contacto__textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario-contacto__textarea {
+  resize: none;
+}
+
+.formulario-contacto__boton {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff0000;
+  color: var(--blanco);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto__boton:hover {
+  background-color: #8b0000;
+}
+
+/* --- FOOTER / PIE DE PÁGINA --- */
+
+.footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.footer__contenido-principal {display: flex;justify-content: space-evenly; width: 90%;margin: 2%;flex-grow: 4;}
+.footer__logo {width: 100%;}
+.footer__navegacion,.footer__horarios,.footer__servicios,.footer__contacto {text-align: left;padding: 0 20px;}
+.footer__titulo {font-size: 1.6rem;font-weight: bold;color: var(--rojo);margin-bottom: 1rem;text-transform: uppercase;}
+.footer__imagen-logo {margin: 30px 0;width: 15%;}
+.footer__lista {list-style: none; }
+.footer__item-lista {margin-bottom: 1.2rem;}
+.footer__enlace{font-weight: bold; text-transform: uppercase;}
+.footer__enlace:hover{color: var(--amarillo);}
+.footer__item-lista a,.footer__redes-sociales__link i {color: var(--blanco);}
+.footer__enlace,.footer__parrafo {text-decoration: none;font-size: 1rem;line-height: 1.5;}
+.footer__redes-sociales {color: var(--blanco);display: flex;gap: 0.8rem;margin-top: 1.2rem;}
+.footer__separador {width: 40%;max-width: 300px;height: 1px;background-color: var(--blanco);border: none;margin: 20px 0;}
+.footer__copyright,.footer__autor {font-size: 0.8rem;margin-top: 0.5rem;color: #ccc;text-align: center;}
+
+@media (max-width: 1200px) {
+  .titulo-principal {font-size: 3rem;}
+  .parrafo-general {font-size: 0.8rem;}
+  .encabezado {padding: 15px 0;}
+  .encabezado__lista {gap: 40px;}
+  .nav__link{font-size: 1.1rem;}
+  .logo {height: 120px;margin-top: 10px;}
+  .inicio-contenido__descripcion,.inicio-contenido__horario {font-size: 1rem;}
+  .redesociales-links {margin-top: 10px;}
+  .sobre-nosotros{justify-content: space-around;}
+  .sobre-nosotros__titulo {margin: 10px 0 20px;}
+  .sobre-nosotros__parrafo {font-size: 1rem;}
+  .sobre-nosotros__imagen-restaurante {width: 80%;}
+  .sobre-nosotros__imagen-chef {width: 200px;height: 200px;}
+  .banner-frase__texto{font-size: 1.5rem}
+  .carta__imagen {height: 55%;}
+  .carta__tarjeta{width: 70%;}
+  .carta__opciones {width: 50%;}
+  .carta__parrafo-boton{font-size: 1rem;}
+  .carta__boton,.carta__boton-delivery {padding: 10px 25px;border-radius: 5px;font-size: 1rem;}
+  .contacto__contenedor{max-width: 900px;}
+  .contacto__dato{font-size: 1.3rem}
+  .contacto__datos {padding: 40px;}
+  .contacto__contenedor {top: 50px;}
+  .formulario-contacto__titulo{font-size: 2.5rem;}
+  .formulario-contacto__input{font-size: 0.5rem;}
+  .footer__titulo{font-size: 1.2rem;}
+
+}
+
+/* 💻 Estilos para laptops y tablets grandes (pantallas de 992px o menos) */
+@media (max-width: 992px) {
+  .inicio-contenido{min-height: 800px; height: auto;}
+  .titulo-principal {font-size: 2rem;}
+  .parrafo-general {font-size: 0.7rem;}
+  .encabezado__nav {margin-top: 40px;}
+  .nav__link{font-size: 0.9rem;}
+  .logo {height: 90px; margin: 20px;}
+  .encabezado__logo{text-align: center;}
+  .encabezado__contenedor{flex-direction: column;}
+  .encabezado__nav {margin-top: 35px;}
+  .boton{font-size: 0.7rem;}
+  .inicio-contenido{padding: 17% 10% 0;}
+  .redesociales-links {margin-top: 36px;}
+  .sobre-nosotros{height: 505px;}
+  .sobre-nosotros__imagenes {width: 40%;height: 60%;}
+  .sobre-nosotros__imagen-chef {bottom: -60px;left: 100px;}
+  .banner-frase{height: 340px;}
+  .sobre-nosotros {justify-content: center;}
+  .sobre-nosotros__imagenes{margin-left: 5%;}
+  .sobre-nosotros__imagen-chef{width: 150px; height: 150px;}
+  .carta__seccion-principal {height: 450px;}
+  .carta__imagen {height: 43%;}
+  .galeria__imagenes {grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));}
+  .galeria__imagen-contenido {height: 180px;}
+  .carta__items-ofrecemos {gap: 80px;}
+  .carta__imagen-ofrecemos {width: 100px;height: 100px;}
+  .carta__subtitulo-ofrecemos {font-size: 1.1rem;}
+  .carta__opciones{grid-template-columns: repeat(2, 1fr); width: 80%;}
+  .contacto__mapa {top: 130px;}
+  .contacto__dato {font-size: 1.1rem;}
+  .contacto__contenedor {top: 30px;}
+   .contacto__datos {padding: 20px;}
+  .footer{gap: 10px;}
+}
+
+/* 📱 Estilos para móviles (pantallas de 576px o menos) */
+@media (max-width: 576px) {
+  .titulo-principal {font-size: 2rem;}
+  .parrafo-general {font-size: 0.6rem;}
+  .inicio-contenido{align-items: center; padding: 2% auto; min-height: 100vh; background-position: calc(100vw - 54pc);}
+  .inicio-contenido__descripcion, .inicio-contenido__horario, .inicio-contenido__titulo{text-align: center;}
+  .redesociales-links {margin-top: 10%;} .boton{border: 2px solid var(--blanco);}
+  .encabezado__nav {margin-top: 0px;}
+  .encabezado{padding: 0;}.encabezado__logo {z-index: 5000;}
+  .logo {position: absolute;
+    bottom: 84%;
+    height: 82px;
+    left: 1%;}
+  .encabezado__contenedor{
+    --icon-toggle-menu: url("imagenes/bars-solid-full.svg");
+    --transform-menu-mostrar: translate(-100%);}
+  .encabezado__contenedor:has(.nav__input:checked){
+    --icon-toggle-menu: url("imagenes/xmark-solid-full.svg");
+    --transform-menu-mostrar: translate(0);}
+  .encabezado__lista {transform: var(--transform-menu-mostrar);
+    background-color: var(--negro);display: grid;place-content: center;width: 100%;height: 100vh;transition: .5s transform;}
+  .nav__input{display: none;} .nav__item {padding: 0.6rem;}
+  .nav__toggle {display: flex;position: absolute;
+    left: 77%;
+    bottom: 89%;z-index: 8000;width: 50px;height: 50px; background-image: var(--icon-toggle-menu);background-size: cover;cursor: pointer;transition: background-image .8s;}
+  .sobre-nosotros__contenido {width: 100%;}
+  .sobre-nosotros{flex-direction: column; margin: 50px auto; margin: 50px 0px 80px auto;}
+  .sobre-nosotros__imagenes {width: 90%;margin-left: -23px;height: 60%; margin: 0px; text-align: center;}
+  .sobre-nosotros__separador-verde{display: none;}
+  .sobre-nosotros__parrafo{margin: 20px auto; width: 80%; text-align: center;}
+  .sobre-nosotros__titulo{text-align: center;}
+  .sobre-nosotros__imagen-chef {left: 44%;width: 170px; height: 170px;}
+  .banner-frase__texto {font-size: 0.8rem;font-weight: bold;}
+  .banner-frase {height: 210px;background-position: center;background-attachment: scroll;}
+  .carta__item-ofrecemos {width: 100%;text-align: center;}
+  .carta__items-ofrecemos {gap: 30px;}
+  .carta__contenido-imagen {width: 40%;padding: 20px 10px;} 
+  .carta__imagen{height: 30%;}
+  .carta__contenido-imagen{flex-direction: column;}
+  .carta__contenido-texto {display: flex;flex-direction: column;justify-content: center;width: 60%;padding: 20px;}   .carta__seccion-principal {height: 380px;}
+  .carta__items-ofrecemos{flex-direction: column;}
+  .carta__opciones {grid-template-columns: repeat(1, 1fr);width: 65%;}
+  .carta__seccion-delivery, .carta__contenido-delivery{padding: 0px;}
+  .galeria{padding: 20px;}
+  .galeria__imagen-contenido {width: 100px;height: 100px;}
+  .galeria__imagenes {grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));place-items: center;}
+  .contacto{padding: 9% 0;}.contacto__contenedor {top: 50px;}
+  .contacto__informacion{display: none;}
+  .formulario-contacto {width: 100%;padding: 20px;} 
+  .formulario-contacto__grupo{margin-bottom: 4%;}
+  .formulario-contacto__descripcion{text-align: center;}
+  .footer__contenido-principal{flex-direction: column; gap: 20px;}
+  .footer__parrafo{margin-bottom: 1.2rem;}
+  .footer__navegacion, .footer__horarios, .footer__servicios, .footer__contacto {text-align: center;padding: 0;}
+  .footer__logo {width: 280%;}
+  .footer__redes-sociales {justify-content: center;}
+}
