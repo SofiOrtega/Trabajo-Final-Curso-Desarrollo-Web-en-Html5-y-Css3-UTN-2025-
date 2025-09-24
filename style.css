@@ -805,7 +805,6 @@ body {
 
 }
 
-/* 💻 Estilos para laptops y tablets grandes (pantallas de 992px o menos) */
 @media (max-width: 992px) {
   .inicio-contenido{min-height: 800px; height: auto;}
   .titulo-principal {font-size: 2rem;}
@@ -840,13 +839,11 @@ body {
    .contacto__datos {padding: 20px;}
   .footer{gap: 10px;}
 }
-
-/* 📱 Estilos para móviles (pantallas de 576px o menos) */
 @media (max-width: 576px) {
-  .titulo-principal {font-size: 2rem;}
-  .parrafo-general {font-size: 0.6rem;}
-  .inicio-contenido{align-items: center; padding: 2% auto; min-height: 100vh; background-position: calc(100vw - 54pc);}
-  .inicio-contenido__descripcion, .inicio-contenido__horario, .inicio-contenido__titulo{text-align: center;}
+  .titulo-principal {font-size: 2.1rem;}
+  .parrafo-general {font-size: 0.75rem;}
+  .inicio-contenido{align-items: center; padding: 2% auto; min-height: 100vh; background-position: calc(100vw - 59pc);} .inicio-contenido br{display: none;}
+  .inicio-contenido__descripcion, .inicio-contenido__horario, .inicio-contenido__titulo{text-align: center; width: 100%;}
   .redesociales-links {margin-top: 10%;} .boton{border: 2px solid var(--blanco);}
   .encabezado__nav {margin-top: 0px;}
   .encabezado{padding: 0;}.encabezado__logo {z-index: 5000;}
@@ -895,6 +892,7 @@ body {
   .footer__contenido-principal{flex-direction: column; gap: 20px;}
   .footer__parrafo{margin-bottom: 1.2rem;}
   .footer__navegacion, .footer__horarios, .footer__servicios, .footer__contacto {text-align: center;padding: 0;}
-  .footer__logo {width: 280%;}
+  .footer__logo {display: none;}
   .footer__redes-sociales {justify-content: center;}
 }
+
