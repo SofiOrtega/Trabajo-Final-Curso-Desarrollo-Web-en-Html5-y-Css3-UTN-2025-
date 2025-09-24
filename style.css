@@ -890,9 +890,11 @@ body {
   .formulario-contacto__grupo{margin-bottom: 4%;}
   .formulario-contacto__descripcion{text-align: center;}
   .footer__contenido-principal{flex-direction: column; gap: 20px;}
+  .footer{overflow-x: hidden;}
   .footer__parrafo{margin-bottom: 1.2rem;}
   .footer__navegacion, .footer__horarios, .footer__servicios, .footer__contacto {text-align: center;padding: 0;}
-  .footer__logo {display: none;}
+  .footer__logo {width: 280%;}
   .footer__redes-sociales {justify-content: center;}
 }
+
 
